@@ -8,7 +8,9 @@ int myNum = 3;
 int main(){
 
     int myNum = 1;
-    cout << ::myNum;
+    cout << ::myNum; // output = 1 
+
+    //local variables are prioritised
 
     return 0;
 }
