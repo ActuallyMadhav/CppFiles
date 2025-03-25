@@ -62,6 +62,19 @@ void printList(Node* head){
     cout << "NULL" << '\n';
 }
 
+void destroyList(Node *& head){
+    Node *nodePtr = head;
+    Node *garbage = nullptr;
+
+    while(nodePtr != nullptr){
+        garbage = nodePtr;
+        nodePtr = nodePtr->next;
+        delete garbage;
+        garbage = nullptr;
+    }
+    head = nullptr;
+}
+
 int main(){
     Node* head = nullptr;
 
@@ -69,6 +82,8 @@ int main(){
     insertAtEnd(head, 13.5);
     // cout<<"1st Node: "<< head->value <<endl;
     // cout<<"2nd Node: "<< head->next->value<<endl;
+    printList(head);
+    destroyList(head);
     printList(head);
     return 0;
 }
