@@ -1,11 +1,11 @@
 #include <iostream>
+using namespace std;
 
 int main() {
 
-    int students = 20;
-    students = students / 3;
+    int test;
+    scanf("%d", &test);
+    cout << test;
 
-    std::cout << students;
-    
     return 0;
 }
