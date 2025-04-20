@@ -6,6 +6,21 @@ struct Node{
     Node *next;
 };
 
+Node* reverseList(Node*& head){
+    Node* cur = head;
+    Node* prev = NULL;
+
+    while(cur){
+        Node* temp = cur->next;
+        cur->next = prev;
+        prev = cur;
+        cur = temp;
+    }
+
+    head = prev;
+    return head;
+}
+
 void insertAtEnd(Node*& head, double newVal){
     Node* newNode = new Node;
     newNode->value = newVal;
@@ -80,10 +95,12 @@ int main(){
 
     insertAtEnd(head, 12.5);
     insertAtEnd(head, 13.5);
+    insertAtEnd(head, 14.5);
     // cout<<"1st Node: "<< head->value <<endl;
     // cout<<"2nd Node: "<< head->next->value<<endl;
     printList(head);
-    destroyList(head);
+    reverseList(head);
+    //destroyList(head);
     printList(head);
     return 0;
 }
