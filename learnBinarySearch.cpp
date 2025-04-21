@@ -6,25 +6,24 @@ int binarySearch(int arr[], int size, int target){
     int high = size - 1;
 
     while(low <= high){
-        int mid = (low + high) / 2;
-
+        int mid = low + (high - low) / 2;
         if(arr[mid] == target){
-            return mid; // target found at index = mid
+            return mid;
         }
         else if(arr[mid] < target){
-            low = mid + 1; // search right half
+            low = mid + 1;
         }
         else{
-            high = mid - 1; // search left half
+            high = mid - 1;
         }
     }
-    return -1; // not found in arr
+    return -1;
 }
 
 
 int main(){
 
-    int nums[] = {0,1,2,3,4};
+    int nums[] = {0,1,2,3,4,5,6,7,8,9};
 
     int arrLen = sizeof(nums) / sizeof(nums[0]);
 

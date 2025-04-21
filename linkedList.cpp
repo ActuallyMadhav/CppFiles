@@ -8,11 +8,11 @@ struct Node{
 
 Node* reverseList(Node*& head){
     Node* cur = head;
-    Node* prev = NULL;
+    Node* prev = nullptr;
 
     while(cur){
         Node* temp = cur->next;
-        cur->next = prev;
+        cur-> next = prev;
         prev = cur;
         cur = temp;
     }
