@@ -7,11 +7,17 @@ class Car{
         string model;
         int year;
         string colour;
-    Car(string make, string model, int year, string colour){
-        this->make = make;
-        this->model = model;
-        this->year = year;
-        this->colour = colour;
+    // Car(string make, string model, int year, string colour){
+    //     this->make = make;
+    //     this->model = model;
+    //     this->year = year;
+    //     this->colour = colour;
+    // }
+    Car(string a, string b, int c, string d){
+        make = a;
+        model = b;
+        year = c;
+        colour = d;
     }
 
 };
