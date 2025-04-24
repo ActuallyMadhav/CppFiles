@@ -4,12 +4,16 @@ class Stove{
     private:
         int temperature = 0;
     public:
+        // getter
         int getTemperature(){
             return temperature;
         }
 
+        // setter
+
         // can set conditions
         // eg: minimum temp = 0 , maximum temp = 10
+
         void setTemperature(int newTemp){
             if(newTemp < 0){
                 this->temperature = 0;
