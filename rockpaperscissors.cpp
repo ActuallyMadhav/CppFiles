@@ -28,7 +28,7 @@ int main(){
 char getComputerChoice(){
     std::vector<char> options = {'r', 's', 'p'};
     srand(time(NULL));
-    int compChoice = rand() % 4;
+    int compChoice = rand() % 3;
 
     char computer = options[compChoice];
 
