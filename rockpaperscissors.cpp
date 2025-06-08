@@ -1,7 +1,4 @@
-#include <iostream>
-#include <ctime>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 char getComputerChoice();
 char getUserChoice();
